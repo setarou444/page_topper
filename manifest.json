@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "ページトッパー",
+  "version": "1.0.0",
+  "description": "ページの一番上に行くリンクを自動で作ります",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ]
+    }
+  ]
+}
