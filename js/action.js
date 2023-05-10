@@ -8,6 +8,7 @@ function pagetopper_event() {
 }
 
 window.addEventListener('load', (event) => {
+    //ページの読み込み終了でページトップ用のspanタグを表示するか設定
     const tl = document.getElementById('pagetopper_link');
     if (window.scrollY >= 50) {
         tl.style.setProperty('display', 'flex');
@@ -15,6 +16,7 @@ window.addEventListener('load', (event) => {
     else {
         tl.style.setProperty('display', 'none');
     }
+    //スクロール量に応じて表示を変更
     window.addEventListener('scroll', function () {
         const tl = document.getElementById('pagetopper_link');
         if (window.scrollY >= 50) {
@@ -27,7 +29,7 @@ window.addEventListener('load', (event) => {
 });
 
 const body_element = document.getElementsByTagName('body')[0];
-//吹き出し用のpタグを作成
+//吹き出し用のspanタグを作成
 const new_element = document.createElement('span');
 new_element.setAttribute('id', 'pagetopper_link');
 new_element.textContent = '↑';
